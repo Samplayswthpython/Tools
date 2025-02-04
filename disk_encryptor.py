@@ -82,7 +82,7 @@ def main() -> None:
     args = parser.parse_args()
     
     if (args.encrypt and args.decrypt) or (not args.encrypt and not args.decrypt):
-        print("[!] Please Specify a valid Operation! Press -h for help")
+        parser.print_help()
         return
 
     password: str = getpass("[?] Enter a password: ")
